@@ -1,0 +1,22 @@
+﻿Type;Feature name;Explanation;Remarks
+application_record;ID;client number;0
+application_record;'CODE_GENDER';gender;0
+application_record;'FLAGOWNCAR';Is there a car;0
+application_record;'FLAGOWNREALTY';Is there a property;0
+application_record;'CNT_CHILDREN';Number of children;0
+application_record;'AMTINCOMETOTAL';Annual income;0
+application_record;'NAMEINCOMETYPE';Income category;0
+application_record;'NAMEEDUCATIONTYPE';education level;0
+application_record;'NAMEFAMILYSTATUS';Marital status;0
+application_record;'NAMEHOUSINGTYPE';Way of living;0
+application_record;'DAYS_BIRTH';birthday;0
+application_record;'DAYS_EMPLOYED';Start date;0
+application_record;'FLAG_MOBIL';Is there a mobile phone;0
+application_record;'FLAGWORKPHONE';Is there a work phone;0
+application_record;'FLAG_PHONE';Is there a phone;0
+application_record;'FLAG_EMAIL';Is there an email;0
+application_record;'OCCUPATION_TYPE';Occupation;0
+application_record;'CNTFAMMEMBERS';Family size;0
+credit_record;ID;client number;0
+credit_record;MONTHS_BALANCE;record month;The month of the extracted data is the starting point backwards 0 is the current month -1 is the previous month and so on
+credit_record;STATUS;status;0: 1-29 days past due 1: 30-59 days past due 2: 60-89 days overdue 3: 90-119 days overdue 4: 120-149 days overdue 5: Overdue or bad debts write-offs for more than 150 days C: paid off that month X: No loan for the month
