@@ -1,2 +1,14 @@
 # Alternative_Credit_Scoring
 Explores the value-add of alternative data to calculate credit risk and make additional customers eligible for credit products
+
+# Data
+My analysis is based on a [dataset from a Chinese financial institutions](https://www.kaggle.com/rikdifos/credit-card-approval-prediction), which has been posted on Kaggle. The dataset consists of two parts which are linked by a unique customer ID: first, data on 439,000 customers along 18 variables and second, data on the credit repayment history of those customers. I’ve also uploaded a dictionary which explains the variables and is copied from the additional information section on the Kaggle page.
+
+# Requirements and Setup
+Once the data is downloaded the code assumes it is saved in the same directory as the jupyter notebook under the name 'Data'. It also assumes that in 'Data' there is a dictionary as an excel (xls format), which can be found in this github repository. The code is inteded to be run on an AWS infrastructure, as it uses AWS S3 and AmazonSagemaker functionalities to train and assess xgboost models based on hybrid and traditional data. Otherwise, the code assumes the availability of standard libraries such as pandas, seaborn, numpy, and matplotlib.
+
+# Problem
+The project is situated in the domains of financial risk, specifically the assessment of creditworthiness of customers applying for financial products such loans or credit cards. The basis for accessing such financial products is a credit score of the applicant. The current credit scoring models focus heavily on 1) a well-established history of (positive) interactions with financial institutions and 2) proof of steady future income as for example evidenced by permanent employment contracts. However, this leaves a series of groups with none or inadequate access to financial products such as students, gig economy workers, and migrants. This analysis focuses on exploring the predictive power of alternative data points to correctly calculate credit scores, such as age, assets, and education. By proving adequate predictive power of those data points that could be verified during the loan application, we can make a case for using alternative credit scoring models so that the aforementioned groups can access financial products.
+
+According to research by Oliver Wyman, a leading management consulting company, in their paper on [Alternative Data and the Unbanked](https://www.oliverwyman.com/content/dam/oliver- wyman/v2/publications/2017/may/Alternative_Data_And_The_Unbanked.pdf) the cut-off rate for obtaining loans currently is at around 4% bad-rate. If we think that a ‘positive’ is someone who is lendable and a ‘negative’ is someone who is non-lendable, the banks essentially accept a false positive rate of 4%. Hence we can formulate the following optimization problem: maximize the number of true positives subject to the false positive rate being below 4%.
+
