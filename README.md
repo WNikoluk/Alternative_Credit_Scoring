@@ -1,5 +1,5 @@
-# Alternative_Credit_Scoring
-Explores the value-add of alternative data to calculate credit risk and make additional customers eligible for credit products
+# Alternative Credit Scoring
+This project explores the value-add of alternative data to calculate credit risk and make additional and previously unbanked customers eligible for credit products.
 
 # Data
 My analysis is based on a [dataset from a Chinese financial institutions](https://www.kaggle.com/rikdifos/credit-card-approval-prediction), which has been posted on Kaggle. The dataset consists of two parts which are linked by a unique customer ID: first, data on 439,000 customers along 18 variables and second, data on the credit repayment history of those customers. I’ve also uploaded a dictionary which explains the variables and is copied from the additional information section on the Kaggle page.
